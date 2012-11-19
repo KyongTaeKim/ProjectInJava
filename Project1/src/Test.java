@@ -2,7 +2,7 @@
 class Test{
     public static void main(String[] args){
         Permutator permute = new Permutator();
-        String letters = "abcde";
+        String letters = "aaab";
         permute.display(letters);
     }
 }
