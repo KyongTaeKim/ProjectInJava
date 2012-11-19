@@ -1,5 +1,4 @@
 public class Permutator{
-    //String finResult = "";
     public String permute(String letters){
         String result = "";
         if (letters.length() == 1){
@@ -8,12 +7,9 @@ public class Permutator{
         else{
             
             for (int i = 0; i < letters.length(); i++){
-               //esult = "";
                 String permuted = "";
                 String rest = letters.substring(0,i)+letters.substring(i+1);
                 String prefix = letters.substring(i,i+1);
-                //String permuted = "";
-                //return result += prefix + permute(rest);
                 permuted = permuted + prefix + permute(rest);
                 String fixed = "";
                 int numIteration = (permuted.length()-1)/rest.length()+1;
@@ -35,4 +31,4 @@ public class Permutator{
             System.out.println((i+1)+". "+result.substring(begin, end));
         }
     }
-}//char[] letter = letters.toCharArray();
+}
